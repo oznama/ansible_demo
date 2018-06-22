@@ -1,0 +1,17 @@
+---
+- name: "Comprobando si existe instalacion en {{ path_setup }}"
+  stat:
+    path: "{{ path_eap_home }}"
+  register: path_instalation_eap
+
+- name: "Descrompimiendo EAP en {{ inventory_hostname }}"
+  unarchive:
+    src: "{{ path_eap_zip }}"
+    dest: "{{ path_setup }}"
+  register: result_unarchive
+  when: path_instalation_eap.stat.exists == False
+
+- name: "Debug resultado descomprimiendo en {{ inventory_hostname }}"
+  debug:
+    msg: "Errors: {{ result_unarchive.failed }}"
+  when: path_instalation_eap.stat.exists == False

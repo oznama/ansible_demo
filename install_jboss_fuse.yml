@@ -1,0 +1,5 @@
+---
+- hosts: fuse_servers
+  remote_user: fuseuser
+  roles:
+    - { role: "install_jboss_fuse" }

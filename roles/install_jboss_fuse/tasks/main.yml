@@ -1,0 +1,17 @@
+---
+- name: "Comprobando si existe instalacion en {{ path_setup }}"
+  stat:
+    path: "{{ path_fuse_home }}"
+  register: path_instalation_fuse
+
+- name: "Descrompimiendo FUSE en {{ inventory_hostname }}"
+  unarchive:
+    src: "{{ path_fuse_zip }}"
+    dest: "{{ path_setup }}"
+  register: result_unarchive
+  when: path_instalation_fuse.stat.exists == False
+
+- name: "Debug resultado descomprimiendo en {{ inventory_hostname }}"
+  debug:
+    msg: "Errors: {{ result_unarchive.failed }}"
+  when: path_instalation_fuse.stat.exists == False

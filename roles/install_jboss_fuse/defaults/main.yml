@@ -1,0 +1,3 @@
+path_fuse_zip: /home/onaranjo/JBoss/jboss-fuse-full-6.2.1.redhat-084.zip
+path_setup: /home/fuseuser
+path_fuse_home: "{{ path_setup }}/jboss-fuse-6.2.1.redhat-084"

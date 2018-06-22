@@ -1,0 +1,12 @@
+# Playbook de prueba mandando ping
+- hosts: all
+  remote_user: centosuser
+
+  tasks:
+    - name: Checando conexion con server(s)
+      ping:
+      register: result
+
+    - name: Debug resultado ping a server
+      debug:
+        msg: "{{ result.ping }}"
