@@ -1,0 +1,9 @@
+---
+- name: "Iniciando servidor {{ service }}"
+  shell: "sh {{ path_server_bin + shell_execute }}"
+  environment: 
+     JAVA_HOME: "{{ java_home }}"
+  register: result_command
+
+- debug:
+    msg: "{{ result_command }}"
