@@ -3,6 +3,6 @@
   include_role:
     name: unzip_archive
   vars:
-    path_installer_zip: "{{ path_fuse_zip }}"
+    path_file_zip: "{{ path_fuse_zip }}"
     path_destination: "{{ path_home }}"
     path_unzip: "{{ path_fuse_home }}"
