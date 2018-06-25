@@ -4,9 +4,9 @@
     path: "{{ path_unzip }}"
   register: result_path_unzip
 
-- name: "Descrompimiendo {{ path_installer_zip }} en {{ inventory_hostname }}"
+- name: "Descrompimiendo {{ path_file_zip }} en {{ inventory_hostname }}"
   unarchive:
-    src: "{{ path_installer_zip }}"
+    src: "{{ path_file_zip }}"
     dest: "{{ path_destination }}"
   register: result_unarchive
   when: result_path_unzip.stat.exists == False
