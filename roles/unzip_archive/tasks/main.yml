@@ -1,4 +1,12 @@
 ---
+- name: "Comprobando si existe zip en {{ path_file_zip }}"
+  stat:
+    path: "{{ path_file_zip }}"
+  register: result_file_zip
+
+- debug:
+    msg: "{{ result_file_zip }}"
+
 - name: "Comprobando si existe carpeta en {{ path_destination }}"
   stat:
     path: "{{ path_unzip }}"
@@ -9,9 +17,9 @@
     src: "{{ path_file_zip }}"
     dest: "{{ path_destination }}"
   register: result_unarchive
-  when: result_path_unzip.stat.exists == False
+  when: result_file_zip.stat.exists and result_path_unzip.stat.exists == False
 
 - name: "Debug resultado descomprimiendo en {{ inventory_hostname }}"
   debug:
     msg: "Errors: {{ result_unarchive.failed }}"
-  when: result_path_unzip.stat.exists == False
+  when: result_file_zip.stat.exists and result_path_unzip.stat.exists == False
