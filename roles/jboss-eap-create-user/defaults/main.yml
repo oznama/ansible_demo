@@ -1,0 +1,8 @@
+java_home: /usr/lib/jvm/java-1.7.0-openjdk-1.7.0.141-2.6.10.5.el7.x86_64/jre
+path_home: /home/webuser
+path_eap_home: "{{ path_home }}/jboss-eap-6.4"
+path_eap_bin: "{{ path_eap_home }}/bin/"
+
+users:
+  - { user: "admin", pswd: "Admin#2018", group: "admin" }
+  - { user: "webeap", pswd: "WebEAP#2018", group: "admin" }

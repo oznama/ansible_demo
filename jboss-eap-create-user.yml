@@ -1,0 +1,5 @@
+---
+- hosts: eap_servers
+  remote_user: webuser
+  roles:
+    - { role: "jboss-eap-create-user" }
