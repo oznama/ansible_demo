@@ -1,0 +1,17 @@
+---
+- name: "Comprobando si existe carpeta en {{ path_destination }}"
+  stat:
+    path: "{{ path_unzip }}"
+  register: result_path_unzip
+
+- name: "Descrompimiendo {{ path_installer_zip }} en {{ inventory_hostname }}"
+  unarchive:
+    src: "{{ path_installer_zip }}"
+    dest: "{{ path_destination }}"
+  register: result_unarchive
+  when: result_path_unzip.stat.exists == False
+
+- name: "Debug resultado descomprimiendo en {{ inventory_hostname }}"
+  debug:
+    msg: "Errors: {{ result_unarchive.failed }}"
+  when: result_path_unzip.stat.exists == False
