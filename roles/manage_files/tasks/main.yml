@@ -1,0 +1,18 @@
+---
+- name: "Comprobando si existe {{ path }}"
+  stat:
+    path: "{{ path }}"
+  register: result_path
+
+- name: "Borrando {{ path }}"
+  file: 
+    path: "{{ path }}" 
+    state: absent
+  when: action == 'remove' and result_path.stat.exists
+
+- name: "Creando {{ path }}"
+  file: 
+    path: "{{ path }}" 
+    state: directory
+    mode: "{{ mode }}"
+  when: action == 'create' and result_path.stat.exists == False

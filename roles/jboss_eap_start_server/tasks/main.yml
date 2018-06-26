@@ -1,8 +1,9 @@
 ---
 - name: "Iniciando servidor {{ service }}"
-  shell: "sh {{ path_server_bin + shell_execute }}"
+  shell: "sh {{ path_server_bin + shell_execute }} -b {{ inventory_hostname }}"
   environment: 
      JAVA_HOME: "{{ java_home }}"
+  async: true
   register: result_command
 
 - debug:

@@ -2,4 +2,4 @@
 - hosts: eap_servers
   remote_user: webuser
   roles:
-    - { role: "jboss-eap-create-user" }
+    - { role: "jboss_eap_start_server" }

@@ -1,0 +1,7 @@
+---
+- name: Detener JBoss Fuse
+  command: "sh {{ path_fuse_home }}/bin/stop"
+  environment:
+     JAVA_HOME: "{{ java_home }}"
+  async: true
+  register: stopFuse

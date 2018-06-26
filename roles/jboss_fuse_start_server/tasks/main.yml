@@ -1,0 +1,13 @@
+---
+- name: Iniciar JBoss Fuse
+  command: "sh {{ path_fuse_home }}/bin/start"
+  environment:
+     JAVA_HOME: "{{ java_home }}"
+  async: true
+  register: startFuse
+
+- name: Levantando Fuse...
+  wait_for:
+    port: "{{ fuse_karaf_port }}"
+    host: localhost
+    delay: "{{ fuse_starting_delay }}"

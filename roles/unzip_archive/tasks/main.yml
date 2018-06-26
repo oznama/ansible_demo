@@ -11,7 +11,7 @@
   register: result_unarchive
   when: result_path_unzip.stat.exists == False
 
-- name: "Debug resultado descomprimiendo en {{ inventory_hostname }}"
-  debug:
-    msg: "Errors: {{ result_unarchive.failed }}"
-  when: result_path_unzip.stat.exists == False
+#- name: "Debug resultado descomprimiendo en {{ inventory_hostname }}"
+#  debug:
+#    msg: "Errors: {{ result_unarchive.failed }}"
+#  when: result_path_unzip.stat.exists == False

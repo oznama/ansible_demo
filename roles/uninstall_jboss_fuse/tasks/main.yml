@@ -1,0 +1,8 @@
+---
+- name: Desinstalando JBoss Fuse
+  include_role:
+    name: manage_files
+  vars:
+    path: "{{ path_fuse_home }}"
+    action: remove
+  when: uninstall

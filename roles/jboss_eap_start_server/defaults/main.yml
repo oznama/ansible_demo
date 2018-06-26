@@ -1,6 +1,5 @@
 ---
 service: JBoss EAP
-remote_user: webuser
 path_server_home: /home/webuser/jboss-eap-6.4
 path_server_bin: "{{ path_server_home }}/bin/"
 shell_execute: standalone.sh

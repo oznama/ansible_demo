@@ -1,0 +1,8 @@
+---
+- name: Habiliar usuario admin
+  lineinfile: 
+    path: "{{ path_fuse_home }}/etc/users.properties"
+    regexp: "^admin=admin"
+    insertafter: "^#admin=admin"
+    line: "admin=admin,admin,manager,viewer,Monitor, Operator, Maintainer, Deployer, Auditor, Administrator, SuperUser"
+    state: present

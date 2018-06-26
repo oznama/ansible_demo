@@ -1,0 +1,7 @@
+---
+path: /home/onaranjo/Documentos/Install_MySQL_8.0-5.7.pdf
+# Acciones
+# remove
+# create
+action: remove
+mode: 0755

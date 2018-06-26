@@ -1,0 +1,2 @@
+path_home: /home/fuseuser
+path_fuse_home: "{{ path_home }}/jboss-fuse-6.2.1.redhat-084"

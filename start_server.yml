@@ -1,4 +1,0 @@
----
-- hosts: eap_servers
-  roles:
-    - { role: "start_server" }
