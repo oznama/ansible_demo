@@ -8,6 +8,7 @@
   unarchive:
     src: "{{ path_file_zip }}"
     dest: "{{ path_destination }}"
+    remote_src: yes
   register: result_unarchive
   when: result_path_unzip.stat.exists == False
 
