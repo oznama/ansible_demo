@@ -12,4 +12,5 @@
     name: "{{ item.name }}"
     state: absent
     remove: yes
+  with_items: "{{ users }}"
   when: option == "delete"

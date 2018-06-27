@@ -1,7 +1,7 @@
 # create o delete
-option: "create"
+option: "delete"
 
 users:
-  - { name: "user1", password: "87654321", comment: "Usuario 1", group: "admin"  }
-  - { name: "user2", password: "pswd987", comment: "Usuario 2", group: "admin"  }
-  - { name: "user3", password: "password123", comment: "Usuario 3", group: "admin"  }
+  - { name: "user1", password: "87654321", comment: "Usuario 1", group: "wheel"  }
+  - { name: "user2", password: "pswd987", comment: "Usuario 2", group: "wheel"  }
+  - { name: "user3", password: "password123", comment: "Usuario 3", group: "wheel"  }
