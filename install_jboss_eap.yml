@@ -1,5 +1,0 @@
----
-- hosts: eap_servers
-  remote_user: webuser
-  roles:
-    - { role: "install_jboss_eap" }

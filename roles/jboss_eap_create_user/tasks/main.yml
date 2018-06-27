@@ -1,7 +1,0 @@
----
-- name: Creando usuario JBoss EAP
-  shell: "sh {{ path_eap_bin }}add-user.sh -u {{ item.user }} -p {{ item.pswd }} -g {{ item.group }}"
-  environment: 
-     JAVA_HOME: "{{ java_home }}" 
-  with_items: "{{ users }}"
-  

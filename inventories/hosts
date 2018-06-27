@@ -1,5 +1,5 @@
-[eap_servers]
-virtcentos01	ansible_ssh_pass=12345678
-virtcentos02	ansible_ssh_pass=12345678
 [fuse_servers]
+virtcentos01	ansible_ssh_pass=12345678
+[employees]
+virtcentos02	ansible_ssh_pass=12345678
 virtcentos03	ansible_ssh_pass=12345678

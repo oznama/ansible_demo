@@ -1,0 +1,15 @@
+- name: Agregando usuario
+  user:
+    name: "{{ item.name }}"
+    password: "{{ item.password }}"
+    comment: "{{ item.comment }}"
+    group: "{{ item.group }}"
+  with_items: "{{ users }}"
+  when: option == "create"
+
+- name: Eliminando usuario
+  user:
+    name: "{{ item.name }}"
+    state: absent
+    remove: yes
+  when: option == "delete"
