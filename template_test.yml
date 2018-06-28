@@ -1,6 +1,4 @@
 - hosts: all
   remote_user: root
-
-  tasks:
-    roles:
-      - { role: "template_test" }
+  roles:
+    - { role: "template_test" }
