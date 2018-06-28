@@ -1,4 +1,4 @@
 <servidor>
-	<hostname>host_{{ inventory_name }}</hostname>
-	<ip>{{ inventory_name }}</ip>
+	<hostname>host_{{ inventory_hostname }}</hostname>
+	<ip>{{ inventory_hostname }}</ip>
 </servidor>
