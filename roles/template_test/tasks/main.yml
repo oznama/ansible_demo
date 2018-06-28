@@ -1,0 +1,5 @@
+---
+- name: Creando template de prueba
+  template:
+    src: template_test.xml
+    dest: /tmp
