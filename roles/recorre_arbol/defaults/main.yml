@@ -1,0 +1,158 @@
+---
+wls_artefactos_2: 
+  - {           
+      targets: "btmxasigna02svm,btmxasigna05svm,btmxasigna08svm",
+      app_name: "scaweb", 
+      artifactory_home: "http://10.100.225.72:8020/artifactory/ansible-asigna-wls/",
+      artefact_group: "com.asigna.sistemacentral",
+      artefact_id: "mwvista",
+      artefact_version: "2.14.0",
+      artefact_type: "zip"
+    }
+  - {           
+      targets: "btmxasigna01svm,btmxasigna04svm,btmxasigna07svm",
+      app_name: "adia-web", 
+      artifactory_home: "http://10.100.225.72:8020/artifactory/ansible-asigna-wls/",
+      artefact_group: "com.asigna.adia",
+      artefact_id: "adia-web",
+      artefact_version: "4.30.2",
+      artefact_type: "zip"
+    } 
+  - {           
+      targets: "btmxasigna02svm,btmxasigna05svm,btmxasigna08svm",
+      app_name: "vhweb", 
+      artifactory_home: "http://10.100.225.72:8020/artifactory/ansible-asigna-wls/",
+      artefact_group: "com.asigna.sistemacentral",
+      artefact_id: "verificadorWeb",
+      artefact_version: "2.14.0",
+      artefact_type: "zip"
+    }    
+  - {           
+      targets: "btmxasigna02svm,btmxasigna05svm,btmxasigna08svm",
+      app_name: "seguridad-webapp", 
+      artifactory_home: "http://10.100.225.72:8020/artifactory/ansible-asigna-wls/",
+      artefact_group: "com.bursatec",
+      artefact_id: "seguridad-web",
+      artefact_version: "2.2.3",
+      artefact_type: "zip"
+    }
+
+
+wls_artefactos_1: 
+  - {           
+      targets: "btmxasigna01svm,btmxasigna04svm,btmxasigna07svm",
+      app_name: "adia-interfases-web", 
+      artifactory_home: "http://10.100.225.72:8020/artifactory/ansible-asigna-wls/",
+      artefact_group: "com.asigna.adia",
+      artefact_id: "adia",
+      artefact_version: "4.30.2",
+      artefact_type: "war"
+    }     
+  - { 
+      targets: "btmxasigna01svm,btmxasigna04svm,btmxasigna07svm",
+      app_name: "comisiones-app", 
+      artifactory_home: "http://10.100.225.72:8020/artifactory/ansible-asigna-wls/",
+      artefact_group: "com.asigna.comisiones",
+      artefact_id: "comisiones",
+      artefact_version: "2.3.11",
+      artefact_type: "ear"
+    }     
+  - { 
+      targets: "btmxasigna01svm,btmxasigna04svm,btmxasigna07svm",
+      app_name: "interfacescontrol-webConsole", 
+      artifactory_home: "http://10.100.225.72:8020/artifactory/ansible-asigna-wls/",
+      artefact_group: "com.asigna.interfacescontrol",
+      artefact_id: "interfacescontrol",
+      artefact_version: "2.12.1",
+      artefact_type: "war"
+    }
+  - { 
+      targets: "btmxasigna03svm,btmxasigna06svm,btmxasigna09svm",
+      app_name: "repositorioAsigna-web", 
+      artifactory_home: "http://10.100.225.72:8020/artifactory/ansible-asigna-wls/",
+      artefact_group: "com.asigna.repositorio",
+      artefact_id: "repositorioAsigna",
+      artefact_version: "2.14.0",
+      artefact_type: "war"
+    }
+  - { 
+      targets: "btmxasigna01svm,btmxasigna04svm,btmxasigna07svm",
+      app_name: "monitor-liquidacion-extraordinaria", 
+      artifactory_home: "http://10.100.225.72:8020/artifactory/ansible-asigna-wls/",
+      artefact_group: "com.asigna.sistemacentral",
+      artefact_id: "sca",
+      artefact_version: "2.14.0",
+      artefact_type: "war"
+    }
+  - { 
+      targets: "btmxasigna03svm,btmxasigna06svm,btmxasigna09svm",
+      app_name: "sca-brokers-war", 
+      artifactory_home: "http://10.100.225.72:8020/artifactory/ansible-asigna-wls/",
+      artefact_group: "com.asigna.sistemacentral.brokers",
+      artefact_id: "sca-brokers",
+      artefact_version: "2.14.0",
+      artefact_type: "war"
+    }    
+  - { 
+      targets: "btmxasigna03svm,btmxasigna06svm,btmxasigna09svm",
+      app_name: "sca-contingencia-war", 
+      artifactory_home: "http://10.100.225.72:8020/artifactory/ansible-asigna-wls/",
+      artefact_group: "com.asigna.sistemacentral",
+      artefact_id: "sca-interfases",
+      artefact_version: "2.14.0",
+      artefact_type: "war"
+    }        
+  - { 
+      targets: "btmxasigna02svm,btmxasigna05svm,btmxasigna08svm",
+      app_name: "sca-ear", 
+      artifactory_home: "http://10.100.225.72:8020/artifactory/ansible-asigna-wls/",
+      artefact_group: "com.asigna.sistemacentral",
+      artefact_id: "mdb-sca",
+      artefact_version: "2.14.0",
+      artefact_type: "ear"
+    }                
+  - { 
+      targets: "btmxasigna01svm,btmxasigna04svm,btmxasigna07svm",
+      app_name: "sca-interfasemexder", 
+      artifactory_home: "http://10.100.225.72:8020/artifactory/ansible-asigna-wls/",
+      artefact_group: "com.asigna.sistemacentral.valuacion.war",
+      artefact_id: "sca-interfasemexder",
+      artefact_version: "2.14.0",
+      artefact_type: "war"
+    }
+  - { 
+      targets: "btmxasigna01svm,btmxasigna04svm,btmxasigna07svm",
+      app_name: "sca-mercado-ph-ear", 
+      artifactory_home: "http://10.100.225.72:8020/artifactory/ansible-asigna-wls/",
+      artefact_group: "com.asigna.sistemacentral",
+      artefact_id: "mdb-mercado-ph",
+      artefact_version: "2.14.0",
+      artefact_type: "ear"
+    }
+  - { 
+      targets: "btmxasigna03svm,btmxasigna06svm,btmxasigna09svm",
+      app_name: "sca-pfa-ear", 
+      artifactory_home: "http://10.100.225.72:8020/artifactory/ansible-asigna-wls/",
+      artefact_group: "com.asigna.sistemacentral",
+      artefact_id: "sca-mdb-pfa",
+      artefact_version: "2.14.0",
+      artefact_type: "ear"
+    }
+  - { 
+      targets: "btmxasignaclust",
+      app_name: "seguridad-ear", 
+      artifactory_home: "http://10.100.225.72:8020/artifactory/ansible-asigna-wls/",
+      artefact_group: "com.bursatec",
+      artefact_id: "seguridad",
+      artefact_version: "2.2.3",
+      artefact_type: "ear"
+    }       
+  - {           
+      targets: "btmxasigna03svm,btmxasigna06svm",
+      app_name: "interfazindeval-ear", 
+      artifactory_home: "http://10.100.225.72:8020/artifactory/ansible-asigna-wls/",
+      artefact_group: "com.asigna.sistemacentral",
+      artefact_id: "sca-interfases",
+      artefact_version: "2.15.1",
+      artefact_type: "ear"
+    }

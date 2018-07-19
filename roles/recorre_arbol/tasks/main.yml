@@ -1,0 +1,4 @@
+---
+- name: Recorriendo arbol
+  include_tasks: pinta_arbol.yml
+  with_items: "{{ wls_artefactos_2 }}"

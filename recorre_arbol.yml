@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+
+  roles:
+    - { role: "recorre_arbol" }

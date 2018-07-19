@@ -1,0 +1,6 @@
+- set_fact:
+    artefacto: "{{ item }}"
+
+- name: Pintando arbol
+  debug:
+    msg: "groupId: {{ artefacto.artefact_group }}, artifactId: {{ artefacto.artefact_id }}, version: {{ artefacto.artefact_version }}, tipo: {{ artefacto.artefact_type }}"
