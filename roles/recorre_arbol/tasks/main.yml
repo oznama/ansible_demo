@@ -1,4 +1,10 @@
 ---
+
+- name: recorre instalaciones
+  include_tasks: pinta_dict.yml
+  with_dict: "{{ instalaciones_eap }}"
+  when: inventory_hostname == item.value.ip
+
 - name: Recorriendo arbol
   include_tasks: pinta_arbol.yml
-  with_items: "{{ wls_artefactos_2 }}"
+  with_items: "{{ wls_artefactos_1 }}"

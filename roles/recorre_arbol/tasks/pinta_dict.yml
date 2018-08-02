@@ -1,0 +1,5 @@
+---
+
+- name: Descomprime jboss.zip
+  debug:
+    msg: "Instalando Carpeta {{ item.value.carpeta }} en maquina {{ item.value.ip }} instalada"
